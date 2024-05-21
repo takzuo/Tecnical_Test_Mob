@@ -1,0 +1,2 @@
+
+const String urlimagenfail = 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEglmMr4wRpb-xPsYdEQpZ7limkiWjRUGIeTJ2cGkGvKB2uj1Sx6O6SiBubtwKJtOEOxG2Bj8K0fxzCPeaZPOxQKzevzc44kAl5Xcj4KyK2kIX9yO7NLeezI8DXt_oqKUO_HR9zdN0iiH1Z-_uziTScF0cp8anZLoF22eCc61df-8NAighW3ZNTGdexATx8p/s320/upsalgofallo.png';
