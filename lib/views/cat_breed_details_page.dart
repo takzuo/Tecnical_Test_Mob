@@ -17,14 +17,36 @@ class CatBreedDetailsPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Image.network(breed.imageUrl, height: 250, fit: BoxFit.cover),
+            Center(
+              child: Container(
+                decoration: BoxDecoration(
+                  border: Border.all(color: Colors.grey, width: 2),
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(8),
+                  child: Image.network(breed.imageUrl, height: 250, fit: BoxFit.cover),
+                ),
+              ),
+            ),
             SizedBox(height: 8),
-            Text(breed.description, style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400)),
-            // Aquí puedes agregar más información y widgets según necesites
+            Expanded(
+              child: SingleChildScrollView(
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Center(
+                    child: Text(
+                      breed.description,
+                      style: TextStyle(fontSize: 20, fontWeight: FontWeight.w400),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ),
     );
   }
 }
-

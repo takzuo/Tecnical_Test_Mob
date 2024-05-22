@@ -1,14 +1,17 @@
 import 'package:http/http.dart' as http;
 import 'dart:convert';
-import '../models/cat_breed.dart';  // Asegúrate de que la ruta al archivo de modelo es correcta
+import 'package:tecnical_test_mob/models/cat_breed.dart';
 
 class CatApiService {
   final String baseUrl = 'https://api.thecatapi.com/v1/breeds';
   final String apiKey = 'bda53789-d59e-46cd-9bc4-2936630fde39';
+  final http.Client client;
+
+  CatApiService({http.Client? client}) : client = client ?? http.Client();
 
   Future<List<CatBreed>> getCatBreeds() async {
     try {
-      final response = await http.get(
+      final response = await client.get(
         Uri.parse(baseUrl),
         headers: {'x-api-key': apiKey},
       );
@@ -21,8 +24,7 @@ class CatApiService {
       }
     } catch (e) {
       print('Error occurred while fetching cat breeds: $e');
-      rethrow;  // Puedes optar por manejar el error de manera diferente
+      rethrow; //TODO mejorar manejo de errores
     }
   }
 }
-

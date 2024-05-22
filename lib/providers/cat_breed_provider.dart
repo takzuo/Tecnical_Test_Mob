@@ -26,7 +26,7 @@ class CatBreedProvider with ChangeNotifier {
     } catch (e) {
       _isLoading = false;
       notifyListeners();
-      // Aquí podrías manejar el error, por ejemplo, mostrando un mensaje en la UI.
+      // Aquí se podría manejar el error, por ejemplo, mostrando un mensaje en la UI.
       print('Failed to fetch cat breeds: $e');
     }
   }
